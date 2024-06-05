@@ -276,6 +276,11 @@ body {
 
 .hero {
   grid-row-gap: 36px;
+  -webkit-text-fill-color: inherit;
+  background-image: url('../images/Frankencoin-hero-bg-m.png');
+  background-position: 50%;
+  background-size: cover;
+  background-clip: border-box;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
@@ -289,6 +294,7 @@ body {
 }
 
 .hero.whatisfrankecoin {
+  background-image: none;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -2413,6 +2419,11 @@ body {
   display: flex;
 }
 
+.container.herotitle {
+  background-color: rgba(16, 24, 39, 0);
+  position: relative;
+}
+
 .row-2 {
   grid-row-gap: 8px;
   border: 0 solid #283243;
@@ -3770,6 +3781,10 @@ body {
   text-decoration: none;
   display: block;
   position: static;
+}
+
+.s-caps.statstext:hover {
+  color: var(--white);
 }
 
 .value-2 {
@@ -9588,8 +9603,8 @@ body {
 }
 
 .link-block {
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
   justify-content: center;
   align-items: center;
   width: auto;
@@ -9773,11 +9788,15 @@ body {
 
 .imagearrow2 {
   z-index: 1;
+  width: 14px;
+  height: auto;
   display: block;
   position: absolute;
 }
 
 .imagearrow1 {
+  width: 14px;
+  height: auto;
   display: block;
   position: absolute;
 }
@@ -10337,6 +10356,10 @@ body {
   margin-bottom: 0;
 }
 
+.image-8 {
+  position: fixed;
+}
+
 @media screen and (min-width: 1440px) {
   .card-7:hover, .democratize-div-2:hover {
     background-color: var(--secondary-colours--neutrals--card-hover\<deleted\|variable-0ad6d7fe-c36b-b46d-a7f5-37ee366fe01b\>);
@@ -10398,6 +10421,7 @@ body {
 
 @media screen and (max-width: 991px) {
   .hero {
+    background-size: cover;
     padding-left: 0;
     padding-right: 0;
   }
@@ -10878,8 +10902,13 @@ body {
   }
 
   .hero {
+    background-size: cover;
     height: 90vh;
     margin-bottom: 0;
+  }
+
+  .hero.homepage {
+    background-position: 65%;
   }
 
   .mission {
@@ -11254,7 +11283,7 @@ body {
 
   .headline-43 {
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
   }
 

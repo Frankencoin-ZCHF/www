@@ -6746,7 +6746,7 @@ body {
   display: flex;
 }
 
-.how-to-invest-block {
+.how-to-get-block {
   grid-row-gap: 32px;
   flex-direction: column;
   justify-content: flex-start;
@@ -12710,7 +12710,7 @@ body {
     width: 100px;
   }
 
-  .how-to-invest-block, .get-zchf-cards {
+  .how-to-get-block, .get-zchf-cards {
     grid-row-gap: 20px;
   }
 

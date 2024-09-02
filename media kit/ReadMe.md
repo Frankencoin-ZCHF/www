@@ -15,3 +15,22 @@ This media kit is designed to provide you with all the essential resources, guid
 - Place the logo too close to other elements or reduce it to a size where it becomes difficult to read.
 - Use the logo in a context that damages the brand.
 - Place the logo on busy or patterned backgrounds where it is hard to see.
+
+
+
+
+## Quick Overview:
+
+
+#### Colors: 
+![image](https://github.com/user-attachments/assets/aad299fd-62ce-4019-97be-1cae28aeacc6)
+
+
+#### Logos: 
+![image](https://github.com/user-attachments/assets/500cd9aa-7fec-45e4-83fe-b9d7fd4d577e)
+
+
+#### Fonts: 
+
+Avenir. 70px, 32px, or 20px              
+Alternative: Satoshi Black. 68px, 31px, or 19.4px

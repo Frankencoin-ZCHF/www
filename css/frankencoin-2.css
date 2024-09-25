@@ -59,11 +59,11 @@
   --frankencoin-pay---font-size--titel-1-mobile: 32px;
   --frankencoin-pay---line-height--titel-1-mobile: 34px;
   --frankencoin-pay---font-size--display-mobile: 42px;
+  --frankencoin-pay---brand-colorccs--titan-gray: #5d647b;
+  --frankencoin-pay---brand-colors--titan-gray: #5d647b;
   --frankencoin-pay---black: black;
   --frankencoin-pay---button-corner-radius: 4px;
-  --frankencoin-pay---brand-colorccs--titan-gray: #5d647b;
   --frankencoin-pay---brand-colors--white: white;
-  --frankencoin-pay---brand-colors--titan-gray: #5d647b;
   --frankencoin-pay---line-height--body-2-stronger-desktop: 23px;
   --frankencoin-pay---line-height--large-title-mobile: 38px;
   --frankencoin-pay---neutral--foreground--on-brand--rest: #fff;
@@ -1584,6 +1584,7 @@
 }
 
 .body-2-stronger {
+  box-sizing: border-box;
   font-family: var(--frankencoin-pay---font--body-2-stronger-desktop);
   color: var(--frankencoin-pay---gray--75);
   font-size: var(--frankencoin-pay---font-size--body-2-stronger-desktop);
@@ -1596,6 +1597,10 @@
 
 .body-2-stronger.blue {
   color: var(--frankencoin-pay---brand-colors--swiss-blue);
+}
+
+.body-2-stronger.tab-text-bold {
+  color: var(--frankencoin-pay---brand-colors--anthracite);
 }
 
 .text-78 {
@@ -1792,9 +1797,13 @@
 
 .title-3 {
   grid-row-gap: 2px;
+  font-family: var(--frankencoin-pay---font--title-3-desktop);
+  color: var(--frankencoin-pay---brand-colors--anthracite);
+  font-size: var(--frankencoin-pay---font-size--title-3-desktop);
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  font-weight: 900;
   text-decoration: none;
   display: flex;
 }
@@ -1947,6 +1956,10 @@
   font-weight: 400;
   text-decoration: none;
   display: flex;
+}
+
+.body-2.body-text-tab {
+  color: var(--frankencoin-pay---brand-colors--anthracite);
 }
 
 .vectors-wrapper-199 {
@@ -4379,9 +4392,9 @@
 }
 
 .tab.w--current {
-  border: 1px solid var(--frankencoin-pay---brand-colors--anthracite);
+  border: 1px solid var(--frankencoin-pay---brand-colorccs--titan-gray);
   background-color: #0000;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .div-block-4 {
@@ -4510,6 +4523,257 @@
   max-width: 900px;
 }
 
+.tabs-2 {
+  flex: 0 auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 570px;
+  display: flex;
+}
+
+.tabs-menu-2 {
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
+  flex-flow: column;
+  width: 100%;
+  max-width: 374px;
+  margin-right: 40px;
+  display: flex;
+}
+
+.tab-pane-tab-1 {
+  width: 100%;
+  height: 100%;
+}
+
+.tab-link-tab-1 {
+  width: 100%;
+}
+
+.tab-link-tab-1.w--current {
+  background-color: var(--frankencoin-pay---5);
+  border-radius: 12px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+}
+
+.tab-link-tab-1.tab-link {
+  border: 1px solid var(--frankencoin-pay---white);
+  background-color: var(--frankencoin-pay---white);
+  border-radius: 12px;
+  height: 59px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+}
+
+.tab-link-tab-1.tab-link:hover {
+  border-color: var(--frankencoin-pay---gray--20);
+}
+
+.tab-link-tab-1.tab-link.w--current {
+  border-style: solid;
+  border-color: var(--frankencoin-pay---brand-colors--titan-gray);
+  background-color: var(--frankencoin-pay---white);
+  height: 59px;
+}
+
+.tab-link-tab-2 {
+  border: 1px solid var(--frankencoin-pay---white);
+  background-color: #fff;
+  border-radius: 12px;
+  width: 100%;
+  height: 59px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+}
+
+.tab-link-tab-2:hover {
+  border-color: var(--frankencoin-pay---gray--20);
+}
+
+.tab-link-tab-2.w--current {
+  border-color: var(--frankencoin-pay---brand-colors--titan-gray);
+  background-color: var(--frankencoin-pay---white);
+  border-radius: 12px;
+}
+
+.tab-link-tab-3 {
+  border: 1px solid var(--frankencoin-pay---white);
+  background-color: #fff;
+  border-radius: 12px;
+  width: 100%;
+  height: 59px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+}
+
+.tab-link-tab-3:hover {
+  border-color: var(--frankencoin-pay---gray--20);
+}
+
+.tab-link-tab-3.w--current {
+  border-color: var(--frankencoin-pay---brand-colors--titan-gray);
+  background-color: var(--frankencoin-pay---white);
+  border-radius: 12px;
+}
+
+.tab-link-tab-4 {
+  border: 1px solid var(--frankencoin-pay---white);
+  background-color: #fff;
+  border-radius: 12px;
+  width: 100%;
+  height: 59px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+}
+
+.tab-link-tab-4:hover {
+  border-color: var(--frankencoin-pay---gray--20);
+}
+
+.tab-link-tab-4.w--current {
+  border-color: var(--frankencoin-pay---brand-colorccs--titan-gray);
+  background-color: var(--frankencoin-pay---white);
+  border-radius: 12px;
+}
+
+.tab-link-tab-5 {
+  border: 1px solid var(--frankencoin-pay---white);
+  background-color: #fff;
+  border-radius: 12px;
+  max-width: 100%;
+  height: 59px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+}
+
+.tab-link-tab-5:hover {
+  border-color: var(--frankencoin-pay---gray--20);
+}
+
+.tab-link-tab-5.w--current {
+  border-color: var(--frankencoin-pay---brand-colors--titan-gray);
+  background-color: var(--frankencoin-pay---white);
+}
+
+.tab-pane-tab-2, .tab-pane-tab-5, .tab-pane-tab-4, .tab-pane-tab-3, .tabs-content-2 {
+  width: 100%;
+}
+
+.tab-div {
+  margin-top: 20px;
+  display: flex;
+}
+
+.description {
+  grid-row-gap: 8px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+}
+
+.content {
+  grid-row-gap: 8px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  text-decoration: none;
+  display: block;
+}
+
+.text-91 {
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  color: #272b38;
+  font-size: 16px;
+  line-height: NaNundefined;
+  letter-spacing: undefinedundefined;
+  flex-flow: wrap;
+  flex: 0 auto;
+  order: 0;
+  justify-content: flex-start;
+  align-self: auto;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-decoration: none;
+  display: flex;
+}
+
+.text-0 {
+  color: #272b38;
+  letter-spacing: undefinedundefined;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 23px;
+  text-decoration: none;
+}
+
+.text-1 {
+  color: #272b38;
+  letter-spacing: undefinedundefined;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.description-3 {
+  grid-row-gap: 16px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+}
+
+._01 {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+}
+
+.title-8 {
+  color: #272b38;
+  letter-spacing: .01em;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 23px;
+  text-decoration: none;
+}
+
+.text-92 {
+  color: #272b38;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+}
+
 @media screen and (min-width: 1440px) {
   .dropdown-list-2.w--open {
     opacity: 1;
@@ -4555,6 +4819,71 @@
 
   .text-block-9, .link-block-10 {
     text-decoration: none;
+  }
+
+  .tab:hover {
+    border-color: var(--frankencoin-pay---gray--20);
+    border-radius: 8px;
+  }
+
+  .tab-link-tab-1.tab-link {
+    border-width: 1px;
+    border-color: var(--frankencoin-pay---white);
+  }
+
+  .tab-link-tab-1.tab-link.w--current {
+    border-color: var(--frankencoin-pay---brand-colorccs--titan-gray);
+    background-color: var(--frankencoin-pay---white);
+  }
+
+  .tab-link-tab-2 {
+    border: 1px solid var(--frankencoin-pay---white);
+    background-color: #0000;
+  }
+
+  .tab-link-tab-2:hover {
+    background-color: #0000;
+  }
+
+  .tab-link-tab-2.w--current {
+    border-top-color: var(--frankencoin-pay---brand-colorccs--titan-gray);
+    border-right-color: var(--frankencoin-pay---brand-colorccs--titan-gray);
+    border-bottom-color: var(--frankencoin-pay---brand-colorccs--titan-gray);
+    border-left-color: var(--frankencoin-pay---brand-colorccs--titan-gray);
+    background-color: #0000;
+  }
+
+  .tab-link-tab-3 {
+    border-width: 1px;
+    border-color: var(--frankencoin-pay---white);
+    background-color: #0000;
+  }
+
+  .tab-link-tab-3.w--current {
+    border-color: var(--frankencoin-pay---brand-colorccs--titan-gray);
+    background-color: var(--frankencoin-pay---white);
+  }
+
+  .tab-link-tab-4 {
+    border-width: 1px;
+    border-color: var(--frankencoin-pay---white);
+    background-color: #0000;
+  }
+
+  .tab-link-tab-4.w--current {
+    border-color: var(--frankencoin-pay---brand-colorccs--titan-gray);
+    background-color: var(--frankencoin-pay---white);
+  }
+
+  .tab-link-tab-5 {
+    border-width: 1px;
+    border-color: var(--frankencoin-pay---white);
+    background-color: #0000;
+  }
+
+  .tab-link-tab-5.w--current {
+    border-color: var(--frankencoin-pay---brand-colorccs--titan-gray);
+    background-color: var(--frankencoin-pay---white);
   }
 }
 
@@ -5083,6 +5412,19 @@
     height: 30px;
   }
 
+  .button-text-container {
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .button-text {
+    align-self: auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
   .nav-menu-2 {
     background-color: #f7f7f9;
     flex: none;
@@ -5120,8 +5462,13 @@
   }
 
   .frankencoin-button.mobile {
+    text-align: left;
+    object-fit: fill;
+    order: 0;
+    align-self: auto;
     width: 173px;
-    display: block;
+    padding: 6px 20px;
+    display: flex;
   }
 
   .div-block-5 {
@@ -5130,6 +5477,12 @@
 
   .row-21 {
     grid-column-gap: 10px;
+  }
+
+  .dropdown-2 {
+    justify-content: center;
+    align-items: flex-start;
+    display: none;
   }
 
   .dropdown-list-3 {
@@ -5280,11 +5633,16 @@
 
   .image-2 {
     width: 100%;
+    max-width: 100%;
     display: block;
   }
 
   .button {
+    width: auto;
     margin-top: 24px;
+    padding-top: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
     display: flex;
   }
 
@@ -5654,7 +6012,7 @@
     grid-column-gap: 24px;
     grid-row-gap: 24px;
     flex-flow: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
   }

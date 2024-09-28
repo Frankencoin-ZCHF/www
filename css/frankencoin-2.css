@@ -621,7 +621,7 @@
   border: 1px #283243;
   border-radius: 30px;
   flex-flow: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   max-width: 1240px;
@@ -683,8 +683,9 @@
 .container._64-sparsing {
   grid-column-gap: 64px;
   grid-row-gap: 64px;
-  justify-content: flex-start;
-  align-items: center;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .container.submit-your-project-container {
@@ -703,7 +704,7 @@
 }
 
 .frame-427322450 {
-  grid-row-gap: 24px;
+  grid-row-gap: 36px;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
@@ -4919,8 +4920,20 @@
     padding-left: 124px;
   }
 
+  .frame-427322450 {
+    grid-row-gap: 24px;
+  }
+
+  .section.less-padding {
+    margin-bottom: 20px;
+  }
+
   .primary-button-2.mobile {
     display: block;
+  }
+
+  .title {
+    font-size: 74px;
   }
 
   .core-functions-card:hover {

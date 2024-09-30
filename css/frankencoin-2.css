@@ -4885,6 +4885,10 @@
   display: flex;
 }
 
+.link-6 {
+  color: var(--frankencoin-pay---brand-colors--deep-blue);
+}
+
 @media screen and (min-width: 1440px) {
   .dropdown-list-2.w--open {
     opacity: 1;

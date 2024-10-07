@@ -1,0 +1,19 @@
+# In case of security incidents please contact the
+
+# Frankencoin Association
+
+Contact: mailto: info@frankencoin.com
+
+ 
+
+# For vulnerability reports please contact the Compass Security Bug Bounty Team
+
+Contact: https://bugbounty.compass-security.com/bug-bounties/frankencoin-bug-bounty
+
+Policy: https://bugbounty.compass-security.com/bug-bounties/frankencoin-bug-bounty
+
+ 
+
+Expires: 2027-12-20T00:00:00.000Z
+
+Preferred-Languages: en, de

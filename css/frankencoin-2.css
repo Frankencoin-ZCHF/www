@@ -4890,6 +4890,14 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .nav-left {
+    width: 50%;
+  }
+
+  .brand-3.w--current {
+    width: 100%;
+  }
+
   .dropdown-list-2.w--open {
     opacity: 1;
     -webkit-backdrop-filter: blur(100px);

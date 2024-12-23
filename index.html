@@ -46,7 +46,7 @@
     getData().then((data) => {
       if (data) {
         setContent("zchfTotalSupply", formatAmount(data.totalSupplyZchf ?? 0));
-        setContent("totalValueLocked", formatAmount("27567451.25" ?? 0));
+        setContent("totalValueLocked", formatAmount(27567451.25 ?? 0));
         setContent("fpsMarketCap", formatAmount(data.fpsMarketCapInChf ?? 0));
         setContent("zchfTotalSupplyCurrency", "ZCHF");
         setContent("totalValueLockedCurrency", "ZCHF");

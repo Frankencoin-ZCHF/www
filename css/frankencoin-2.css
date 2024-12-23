@@ -2873,7 +2873,7 @@
   width: 100%;
 }
 
-.vectors-wrapper-148 {
+.code4arena-logo {
   object-fit: cover;
   flex: 0 auto;
   justify-content: center;
@@ -2883,13 +2883,15 @@
   display: flex;
 }
 
-.vectors-wrapper-148.scale-transform {
+.code4arena-logo.scale-transform {
+  justify-content: center;
+  align-items: center;
   width: 300px;
   height: auto;
   transition: transform .2s;
 }
 
-.vectors-wrapper-148.scale-transform:hover {
+.code4arena-logo.scale-transform:hover {
   transform: scale(1.1);
 }
 
@@ -2947,23 +2949,23 @@
   display: flex;
 }
 
-.vectors-wrapper-147 {
+.chainsec-logo {
   object-fit: cover;
   flex: 0 auto;
   justify-content: center;
   align-items: center;
-  height: 58.9195px;
+  height: auto;
   text-decoration: none;
   display: flex;
 }
 
-.vectors-wrapper-147.scale-transform {
+.chainsec-logo.scale-transform {
   width: 300px;
   height: auto;
   transition: transform .2s;
 }
 
-.vectors-wrapper-147.scale-transform:hover {
+.chainsec-logo.scale-transform:hover {
   transform: scale(1.1);
 }
 
@@ -2982,7 +2984,7 @@
 }
 
 .blockbyte-logo-3.scale-transform {
-  width: 150px;
+  width: 250px;
   height: auto;
   transition: transform .2s;
 }
@@ -3004,13 +3006,13 @@
 }
 
 .grid-6 {
-  grid-column-gap: 48px;
-  grid-row-gap: 48px;
+  grid-column-gap: 64px;
+  grid-row-gap: 36px;
   grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr);
   place-content: center;
-  justify-items: stretch;
+  place-items: center;
   width: 100%;
-  padding-left: 48px;
+  padding-left: 0;
 }
 
 .audit-block {
@@ -4889,6 +4891,50 @@
   color: var(--frankencoin-pay---brand-colors--deep-blue);
 }
 
+.decurity-logo {
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  object-fit: cover;
+  flex: 0 auto;
+  justify-content: center;
+  align-items: center;
+  max-width: 70%;
+  height: auto;
+  text-decoration: none;
+  display: flex;
+}
+
+.decurity-logo.scale-transform {
+  width: 300px;
+  height: auto;
+  transition: transform .2s;
+}
+
+.decurity-logo.scale-transform:hover {
+  transform: scale(1.1);
+}
+
+.link-block-11 {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.div-block-24 {
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.chainsec-audits {
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
+  flex-flow: column;
+  display: flex;
+}
+
 @media screen and (min-width: 1440px) {
   .nav-left {
     width: 50%;
@@ -4954,6 +5000,10 @@
 
   .vectors-wrapper-1500 {
     height: 70px;
+  }
+
+  .grid-5 {
+    place-items: center;
   }
 
   .text-block-9, .link-block-10 {
@@ -5449,7 +5499,7 @@
     grid-template-columns: 1fr;
   }
 
-  .aktionariat-3.scale-transform, .vectors-wrapper-112, .vectors-wrapper-1504, .vectors-wrapper-148, .vectors-wrapper-147 {
+  .aktionariat-3.scale-transform, .vectors-wrapper-112, .vectors-wrapper-1504, .code4arena-logo, .chainsec-logo {
     height: auto;
   }
 
@@ -5535,6 +5585,10 @@
   .card-ecosystem {
     grid-row-gap: 30px;
     flex-flow: column;
+  }
+
+  .decurity-logo {
+    height: auto;
   }
 }
 
@@ -5642,6 +5696,10 @@
     padding: 0 20px;
   }
 
+  .container.herotitle {
+    padding-top: 16px;
+  }
+
   .container.stats {
     margin-top: -30px;
     margin-bottom: 0;
@@ -5665,6 +5723,7 @@
   }
 
   .frame-427322450 {
+    grid-row-gap: 32px;
     justify-content: flex-end;
     align-items: flex-start;
   }
@@ -5715,7 +5774,8 @@
   }
 
   .headline-16 {
-    grid-row-gap: 16px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
   }
 
   .section {
@@ -5782,7 +5842,7 @@
 
   .button {
     width: auto;
-    margin-top: 24px;
+    margin-top: 4px;
     padding-top: 6px;
     padding-left: 20px;
     padding-right: 20px;
@@ -5918,6 +5978,8 @@
   .wrapper-logos-4 {
     width: 100%;
     height: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
   }
 
   .container-3 {
@@ -5942,7 +6004,13 @@
   }
 
   .ecosystem-logo-block {
-    height: 300px;
+    background-position: 0 0;
+    background-size: cover;
+    max-width: 800px;
+    height: auto;
+    max-height: 360px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .ammer-pay.scale-transform, .aktionariat-3 {
@@ -6029,14 +6097,15 @@
     grid-row-gap: 48px;
   }
 
-  .vectors-wrapper-148 {
+  .code4arena-logo {
     width: 150px;
     height: auto;
     overflow: auto;
   }
 
-  .vectors-wrapper-148.scale-transform {
-    max-width: 120%;
+  .code4arena-logo.scale-transform {
+    width: auto;
+    max-width: 95%;
   }
 
   .container-5 {
@@ -6045,8 +6114,12 @@
   }
 
   .audit-logo-block {
+    background-size: cover;
     width: 100%;
-    height: 145%;
+    height: 100%;
+    max-height: 360px;
+    padding-top: 8%;
+    padding-bottom: 8%;
   }
 
   .audit-text-block-inner {
@@ -6054,19 +6127,21 @@
   }
 
   .audit-logo-block-wrapper {
+    grid-row-gap: 0px;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 145px;
-    padding: 20px;
+    height: auto;
+    padding: 0;
   }
 
-  .vectors-wrapper-147 {
-    width: 200px;
+  .chainsec-logo {
+    width: auto;
+    max-width: 100%;
     height: auto;
   }
 
-  .vectors-wrapper-147.scale-transform {
+  .chainsec-logo.scale-transform {
     width: 300px;
     max-width: 130%;
   }
@@ -6084,7 +6159,8 @@
   }
 
   .blockbyte-logo-3.scale-transform {
-    width: 100px;
+    width: auto;
+    min-width: 90px;
     max-width: 90%;
   }
 
@@ -6093,10 +6169,11 @@
   }
 
   .grid-6 {
-    grid-row-gap: 20px;
+    grid-column-gap: 0px;
+    grid-row-gap: 24px;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr;
-    width: 100%;
+    width: 90%;
     padding-left: 0;
   }
 
@@ -6344,9 +6421,41 @@
     grid-column-gap: 10px;
     grid-row-gap: 10px;
   }
+
+  .decurity-logo {
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    max-width: 70%;
+    height: auto;
+    overflow: auto;
+  }
+
+  .decurity-logo.scale-transform {
+    max-width: 120%;
+  }
+
+  .link-block-11 {
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2px;
+  }
+
+  .div-block-24 {
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+    min-width: 173px;
+  }
+
+  .chainsec-audits {
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+  }
 }
 
-#w-node-a771602a-5874-8dde-ae72-fece9a23ea9c-59519076, #w-node-a771602a-5874-8dde-ae72-fece9a23ea9e-59519076, #w-node-a771602a-5874-8dde-ae72-fece9a23eaa0-59519076, #w-node-a771602a-5874-8dde-ae72-fece9a23eaa2-59519076, #w-node-a771602a-5874-8dde-ae72-fece9a23eaa4-59519076, #w-node-a771602a-5874-8dde-ae72-fece9a23eaa8-59519076, #w-node-c5e27838-cdb2-35f7-148d-81610927a51c-59519076 {
+#w-node-a771602a-5874-8dde-ae72-fece9a23ea9c-59519076, #w-node-a771602a-5874-8dde-ae72-fece9a23ea9e-59519076, #w-node-a771602a-5874-8dde-ae72-fece9a23eaa0-59519076, #w-node-a771602a-5874-8dde-ae72-fece9a23eaa2-59519076, #w-node-a771602a-5874-8dde-ae72-fece9a23eaa4-59519076, #w-node-a771602a-5874-8dde-ae72-fece9a23eaa8-59519076, #w-node-c5e27838-cdb2-35f7-148d-81610927a520-59519076 {
   place-self: center;
 }
 
@@ -6355,7 +6464,7 @@
   place-self: center;
 }
 
-#w-node-c5e27838-cdb2-35f7-148d-81610927a520-59519076 {
+#w-node-_60d4e0ea-787c-e22f-2490-70f9b48fe59b-59519076, #w-node-a4dccb8c-050c-85ed-e815-9f33cd3ecb59-59519076 {
   place-self: center;
 }
 

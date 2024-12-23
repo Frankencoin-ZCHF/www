@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Fri Nov 29 2024 11:35:25 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Mon Dec 16 2024 15:33:48 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66de9eaf48969ad959519076" data-wf-site="66de9eaf48969ad959519070">
 <head>
   <meta charset="utf-8">
@@ -19,7 +19,8 @@
   <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/48242535.js"></script>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RNM9S018ES"></script>
+  <script type="text/javascript">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('set', 'developer_id.dZGVlNj', true);gtag('config', 'G-RNM9S018ES');</script>
   <style>
   .token-code {
     text-overflow: ellipsis;
@@ -29,7 +30,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     async function getData() {
       try {
-        let response = await fetch("https://api.frankencoin.com/ecosystem/frankencoin/info");
+        let response = await fetch("https://api.dfx.swiss/v1/frankencoin/info");
         if (!response.ok) throw new Error("Failed to fetch quote");
         return response.json();
       } catch (error) {
@@ -44,9 +45,9 @@
     }
     getData().then((data) => {
       if (data) {
-        setContent("zchfTotalSupply", formatAmount(data.total.supply ?? 0));
-        setContent("totalValueLocked", formatAmount(data.tvl.chf ?? 0));
-        setContent("fpsMarketCap", formatAmount(data.fps.fpsMarketCapInChf ?? 0));
+        setContent("zchfTotalSupply", formatAmount(data.totalSupplyZchf ?? 0));
+        setContent("totalValueLocked", formatAmount(data.totalValueLockedInChf ?? 0));
+        setContent("fpsMarketCap", formatAmount(data.fpsMarketCapInChf ?? 0));
         setContent("zchfTotalSupplyCurrency", "ZCHF");
         setContent("totalValueLockedCurrency", "ZCHF");
         setContent("fpsMarketCapCurrency", "ZCHF");
@@ -67,52 +68,6 @@
           <a href="fps.html" class="nav-link-2 w-nav-link">Pool Shares</a>
           <a href="ecosystem.html" class="nav-link-2 w-nav-link">Ecosystem</a>
           <div class="frame-427322438"></div>
-          <div class="frame-427322508 mobile">
-            <div class="row-21">
-              <div class="button-outline-2">
-                <a href="https://apps.apple.com/de/app/frankencoin-wallet/id6480348701" target="_blank" class="link-block-3 w-inline-block"><img width="13.017324447631836" height="16" alt="" loading="lazy" src="images/Logo-Appstore.svg" class="vectors-wrapper-196">
-                  <div class="text-73">App Store</div>
-                </a>
-              </div>
-              <div class="button-outline-2">
-                <a href="https://play.google.com/store/apps/details?id=swiss.dfx.frankencoin_wallet" target="_blank" class="link-block-3 w-inline-block"><img width="13.017324447631836" height="16" alt="" loading="lazy" src="images/Logo-Playstore.svg" class="vectors-wrapper-196">
-                  <div class="text-73">Google play<br></div>
-                </a>
-              </div>
-            </div>
-            <div class="row-21">
-              <div class="button-outline-2">
-                <a href="https://github.com/DFXswiss/frankencoin-wallet/releases/" target="_blank" class="link-block-3 w-inline-block"><img width="13.017324447631836" height="16" alt="" loading="lazy" src="images/App-Platforms-2.svg" class="vectors-wrapper-196">
-                  <div class="text-73">Android Apk<br></div>
-                </a>
-              </div>
-              <div class="button-outline-2">
-                <a href="https://apps.apple.com/de/app/frankencoin-wallet/id6480348701" target="_blank" class="link-block-3 w-inline-block"><img width="13.017324447631836" height="16" alt="" loading="lazy" src="images/App-Platforms-3.svg" class="vectors-wrapper-196">
-                  <div class="text-73">Mac OS<br></div>
-                </a>
-              </div>
-            </div>
-            <div class="row-21">
-              <div class="button-outline-2">
-                <a href="https://apps.apple.com/de/app/testflight/id899247664" target="_blank" class="link-block-3 w-inline-block"><img width="13.017324447631836" height="16" alt="" loading="lazy" src="images/App-Platforms-4.svg" class="vectors-wrapper-196">
-                  <div class="text-73">Linux<br></div>
-                </a>
-              </div>
-              <div class="button-outline-2">
-                <a href="https://github.com/DFXswiss/frankencoin-wallet/releases/" target="_blank" class="link-block-3 w-inline-block"><img width="13.017324447631836" height="16" alt="" loading="lazy" src="images/App-Platforms-5.svg" class="vectors-wrapper-196">
-                  <div class="text-73">Windows<br></div>
-                </a>
-              </div>
-            </div>
-            <div class="row-21">
-              <div class="button-outline-2">
-                <a href="https://testflight.apple.com/join/2R0lSq7I" target="_blank" class="link-block-3 w-inline-block"><img width="13.017324447631836" height="16" alt="" loading="lazy" src="images/App-Platforms-3.svg" class="vectors-wrapper-196">
-                  <div class="text-73">Testflight<br></div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="frame-427322438 _2"></div>
           <a data-figma-id="7571:10030" href="https://app.frankencoin.com/" class="frankencoin-button mobile w-inline-block">
             <div data-figma-id="I7457:65201;61:52690" class="button-text-container">
               <p data-figma-id="I7457:65201;61:52692" class="children">Launch Web App</p>
@@ -126,66 +81,6 @@
                 <p data-figma-id="I7457:65201;61:52692" class="button-text">Launch App</p>
               </div>
             </a>
-            <div data-delay="0" data-hover="false" class="dropdown-2 w-dropdown">
-              <div class="button-outline w-dropdown-toggle">
-                <div class="icons-3">
-                  <div class="appleblock"><img width="20" height="20" alt="" src="images/Logo-Appstore_1.svg" loading="lazy" class="vectors-wrapper-197"></div>
-                  <div class="playblock"><img width="20" height="20" alt="" src="images/Logo-Playstore-Compressify.io.webp" loading="lazy" class="vectors-wrapper-197"></div>
-                </div>
-                <div class="arrowblock"><img src="images/expand_more.svg" loading="lazy" alt="" class="arrowimggray"></div>
-              </div>
-              <nav class="dropdown-list-3 w-dropdown-list">
-                <div>
-                  <div class="popover-ex">
-                    <div class="frame-427322508">
-                      <div class="row-21">
-                        <div class="button-outline-2">
-                          <a href="https://apps.apple.com/de/app/frankencoin-wallet/id6480348701" target="_blank" class="link-block-3 w-inline-block"><img width="13.017324447631836" height="16" alt="" loading="eager" src="images/Logo-Appstore.svg" class="vectors-wrapper-196">
-                            <div class="text-73">App Store</div>
-                          </a>
-                        </div>
-                        <div class="button-outline-2">
-                          <a href="https://play.google.com/store/apps/details?id=swiss.dfx.frankencoin_wallet" target="_blank" class="link-block-3 w-inline-block"><img width="13.017324447631836" height="16" alt="" loading="eager" src="images/Logo-Playstore.svg" class="vectors-wrapper-196">
-                            <div class="text-73">Google play<br></div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="row-21">
-                        <div class="button-outline-2">
-                          <a href="https://github.com/DFXswiss/frankencoin-wallet/releases/" target="_blank" class="link-block-3 w-inline-block"><img width="13.017324447631836" height="16" alt="" loading="eager" src="images/App-Platforms-2.svg" class="vectors-wrapper-196">
-                            <div class="text-73">Android Apk<br></div>
-                          </a>
-                        </div>
-                        <div class="button-outline-2">
-                          <a href="https://apps.apple.com/de/app/frankencoin-wallet/id6480348701" target="_blank" class="link-block-3 w-inline-block"><img width="13.017324447631836" height="16" alt="" loading="eager" src="images/App-Platforms-3.svg" class="vectors-wrapper-196">
-                            <div class="text-73">Mac OS<br></div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="row-21">
-                        <div class="button-outline-2">
-                          <a href="https://apps.apple.com/de/app/testflight/id899247664" target="_blank" class="link-block-3 w-inline-block"><img width="13.017324447631836" height="16" alt="" loading="eager" src="images/App-Platforms-4.svg" class="vectors-wrapper-196">
-                            <div class="text-73">Linux<br></div>
-                          </a>
-                        </div>
-                        <div class="button-outline-2">
-                          <a href="https://github.com/DFXswiss/frankencoin-wallet/releases/" target="_blank" class="link-block-3 w-inline-block"><img width="13.017324447631836" height="16" alt="" loading="eager" src="images/App-Platforms-5.svg" class="vectors-wrapper-196">
-                            <div class="text-73">Windows<br></div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="row-21">
-                        <div class="button-outline-2">
-                          <a href="https://testflight.apple.com/join/2R0lSq7I" target="_blank" class="link-block-3 w-inline-block"><img width="13.017324447631836" height="16" alt="" loading="eager" src="images/App-Platforms-3.svg" class="vectors-wrapper-196">
-                            <div class="text-73">Testflight<br></div>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </nav>
-            </div>
           </div>
           <div class="menu-button-2 w-nav-button">
             <div class="icon w-icon-nav-menu"></div>
@@ -228,35 +123,35 @@
   <section class="section stats-section">
     <div class="w-layout-blockcontainer container stats w-container">
       <div class="stats-list-l">
-        <a data-w-id="e5f136ce-00df-4b69-b557-4da91b4a6e2b" href="https://defillama.com/protocol/frankencoin#information" target="_blank" class="stats-badge w-inline-block">
+        <a data-w-id="e5f136ce-00df-4b69-b557-4da91b4a6e2b" href="https://coinmarketcap.com/currencies/frankencoin/" target="_blank" class="stats-badge w-inline-block">
           <div class="text">
             <div class="headline">
-              <div class="paragraph">Total value locked</div><img src="images/arrow_outward.svg" loading="lazy" alt="" class="image-4">
+              <div class="paragraph">Total value locked </div><img src="images/arrow_outward.svg" loading="lazy" alt="" class="image-4">
             </div>
             <div class="value">
-              <div id="totalValueLocked" class="big-number"></div>
+              <div id="totalValueLocked" class="big-number">6,464,994</div>
               <div class="big-number-2">ZCHF</div>
             </div>
           </div>
         </a>
-        <a data-w-id="d89a0143-820f-fb9b-c0e4-2d64181a04f2" href="https://coinmarketcap.com/currencies/frankencoin/" target="_blank" class="stats-badge w-inline-block">
+        <a data-w-id="d89a0143-820f-fb9b-c0e4-2d64181a04f2" href="https://defillama.com/protocol/frankencoin#information" target="_blank" class="stats-badge w-inline-block">
           <div class="text">
             <div class="headline">
               <div class="paragraph">Total supply</div><img src="images/arrow_outward.svg" loading="lazy" alt="" class="image-4">
             </div>
             <div class="value">
-              <div id="zchfTotalSupply" class="big-number"></div>
+              <div id="zchfTotalSupply" class="big-number">13,464,994</div>
               <div class="big-number-2">ZCHF</div>
             </div>
           </div>
         </a>
-        <a data-w-id="0751bcc2-308a-fa7f-40e7-5f2f8f91687e" href="https://app.frankencoin.com/equity" target="_blank" class="stats-badge w-inline-block">
+        <a data-w-id="0751bcc2-308a-fa7f-40e7-5f2f8f91687e" href="https://app.frankencoin.com/pool" target="_blank" class="stats-badge w-inline-block">
           <div class="text">
             <div class="headline">
-              <div class="paragraph">FPS market cap</div><img src="images/arrow_outward.svg" loading="lazy" alt="" class="image-4">
+              <div class="paragraph">fps market cap</div><img src="images/arrow_outward.svg" loading="lazy" alt="" class="image-4">
             </div>
             <div class="value">
-              <div id="fpsMarketCap" class="big-number"></div>
+              <div id="fpsMarketCap" class="big-number">5,464,994</div>
               <div class="big-number-2">ZCHF</div>
             </div>
           </div>
@@ -299,7 +194,7 @@
             </div>
           </div>
         </a>
-        <a data-w-id="a2d816e6-46a1-6079-0411-be07395c320a" href="https://app.frankencoin.com/equity" target="_blank" class="core-card w-inline-block">
+        <a data-w-id="a2d816e6-46a1-6079-0411-be07395c320a" href="https://app.frankencoin.com/pool" target="_blank" class="core-card w-inline-block">
           <div class="core-text-block">
             <div class="title-2">Earn<br></div><img src="images/Icon-Invest.svg" loading="lazy" alt="">
             <div class="body-1 left">Buy Frankencoin Pool Shares or earn a yield by locking Frankencoins (coming soon).<br></div>
@@ -708,7 +603,7 @@
               </div>
               <div class="_01">
                 <div class="body-2-stronger tab-text-bold">6. Sell.</div>
-                <div class="body-2 body-text-tab">Recipients can sell their Frankencoins again on the market.</div>
+                <div class="body-2 body-text-tab">Recipients can sell sell their Frankencoins again on the market.</div>
               </div>
             </div>
           </div>
@@ -762,10 +657,10 @@
               </div>
               <div class="_01">
                 <div class="body-2-stronger tab-text-bold">11. Add capital.</div>
-                <div class="body-2 body-text-tab">When adding capital to the equity reserve pool, you get freshly minted Frankencoin Pool Shares (FPS) in return. The amount of FPS is calculated using a bonding curve with the invariant &quot;Market Cap = FPS Supply * FPS Price = 3 * Equity Reserve Pool&quot;, minus 0.3% issuance fee.</div>
+                <div class="body-2 body-text-tab">When adding capital to the equity reserve pool, you get freshly printed Frankencoin Pool Shares (FPS) in return. The amount of FPS is calculated using a bonding curve with the invariant &quot;Market Cap = FPS Supply * FPS Price = 3 * Equity Reserve Pool&quot;, minus 0.3% issuance fee.</div>
               </div>
               <div class="_01">
-                <div class="body-2-stronger tab-text-bold">12. FPS appreciation or depreciation.</div>
+                <div class="body-2-stronger tab-text-bold">12. FPS appreciation or depriciation.</div>
                 <div class="body-2 body-text-tab">After a minimum holding duration of three months, the FPS can be returned to the system at the current price, minus 0.3% redemption fee.</div>
               </div>
             </div>
@@ -870,14 +765,14 @@
                 <div class="description-3">
                   <div class="_01">
                     <div class="body-2-stronger tab-text-bold">10. Buy FPS.</div>
-                    <div class="body-2 body-text-tab">Investors might want to buy FPS in order to speculate on the success of the whole system.</div>
+                    <div class="body-2 body-text-tab">Other might want to buy in order to speculate on the success of the whole system.</div>
                   </div>
                   <div class="_01">
                     <div class="body-2-stronger tab-text-bold">11. Add capital.</div>
                     <div class="body-2 body-text-tab">When adding capital to the equity reserve pool, you get freshly printed Frankencoin Pool Shares (FPS) in return. The amount of FPS is calculated using a bonding curve with the invariant &quot;Market Cap = FPS Supply * FPS Price = 3 * Equity Reserve Pool&quot;, minus 0.3% issuance fee.</div>
                   </div>
                   <div class="_01">
-                    <div class="body-2-stronger tab-text-bold">12. FPS appreciation or depreciation.</div>
+                    <div class="body-2-stronger tab-text-bold">12. FPS appreciation or depriciation.</div>
                     <div class="body-2 body-text-tab">After a minimum holding duration of three months, the FPS can be returned to the system at the current price, minus 0.3% redemption fee.</div>
                   </div>
                 </div>
@@ -907,7 +802,7 @@
         <div class="ecosystem-logo-block">
           <div class="wrapper-logos-4">
             <div class="w-layout-grid grid-5">
-              <a id="w-node-a771602a-5874-8dde-ae72-fece9a23ea9c-59519076" href="https://www.aktionariat.com/all-companies" target="_blank" class="link-block w-inline-block"><img sizes="(max-width: 479px) 82vw, 300px" srcset="images/aktionariat-Compressify.io-p-500.webp 500w, images/aktionariat-Compressify.io.webp 775w" alt="" src="images/aktionariat-Compressify.io.webp" loading="lazy" class="image-12 scale-transform"></a>
+              <a id="w-node-a771602a-5874-8dde-ae72-fece9a23ea9c-59519076" href="https://www.aktionariat.com/all-companies" target="_blank" class="link-block w-inline-block"><img sizes="(max-width: 479px) 82vw, 270px" srcset="images/aktionariat-Compressify.io-p-500.webp 500w, images/aktionariat-Compressify.io.webp 775w" alt="" src="images/aktionariat-Compressify.io.webp" loading="lazy" class="image-12 scale-transform"></a>
               <a id="w-node-a771602a-5874-8dde-ae72-fece9a23ea9e-59519076" href="https://exchange.dfx.swiss/" target="_blank" class="link-block-4 w-inline-block"><img width="Auto" height="Auto" alt="" src="images/DFX-Logos-Compressify.io.webp" loading="lazy" class="vectors-wrapper-dex scale-transform"></a>
               <a id="w-node-a771602a-5874-8dde-ae72-fece9a23eaa0-59519076" href="https://swap.defillama.com/?from=0xdAC17F958D2ee523a2206206994597C13D831ec7&amp;to=0xB58E61C3098d85632Df34EecfB899A1Ed80921cB&amp;chain=ethereum" target="_blank" class="w-inline-block"><img width="Auto" height="Auto" alt="" src="images/Vectors-Wrapper_3.svg" loading="lazy" class="vectors-wrapper-1504 scale-transform"></a>
               <a id="w-node-a771602a-5874-8dde-ae72-fece9a23eaa2-59519076" href="https://zippy.swiss/" target="_blank" class="w-inline-block"><img id="w-node-a771602a-5874-8dde-ae72-fece9a23eaa3-59519076" loading="lazy" alt="" src="images/zippy-1-Compressify.io.webp" class="image-13 scale-transform"></a>
@@ -927,7 +822,7 @@
           <div class="headline-37">
             <div class="large-title">Token Classification</div>
           </div>
-          <div class="body-1 token-classification">The Frankencoin (ZCHF) has been classified as a payment token under Swiss law, and the Frankencoin Pool Share (FPS) as a utility token. European and other classifications are pending. For more information, please read the <a href="https://github.com/Frankencoin-ZCHF/www/blob/main/documents/ZCHF_FPS_Memo.pdf" target="_blank" class="link-6">memorandum</a>.</div>
+          <div class="body-1 token-classification">Frankencoin (ZCHF) has been classified as a payment token under Swiss law. Frankencoin Pool Shares as governance tokens. European and other classifications are pending. For more information, please read the <a href="https://github.com/Frankencoin-ZCHF/www/blob/main/documents/ZCHF_FPS_Memo.pdf" target="_blank" class="link-6">memorandum</a>.</div>
         </div>
       </div>
     </div>
@@ -985,7 +880,7 @@
               </a>
               <a id="all-about" href="#" class="faq-question w-node-_8033141c-2ab8-706e-e64c-dbff3ac9dd27-3ac9dd27 w-inline-block">
                 <div class="faq-question-bar">
-                  <div class="body-1-stronger">Is the Frankencoin ecosystem useful?</div><img width="19.5" height="19.5" alt="" src="images/Union.svg" loading="lazy" class="faq-plus">
+                  <div class="body-1-stronger">Is the Frankencoin Ecosystem useful?</div><img width="19.5" height="19.5" alt="" src="images/Union.svg" loading="lazy" class="faq-plus">
                 </div>
                 <div class="faq-content">
                   <p id="all-about" class="body-1">If used with the necessary care, most definitely. Most of the usefulness of the Frankencoin comes from its decentralized nature. It is open, fully transparent, and freely interactible by humans and software alike. Thanks to its transparency, anyone can analyze its solvency at any moment. If it is in imbalance, it can be expected to be attacked by speculators who know exactly at which market prices the Frankencoin is not fully backed any more. The goal is not to imitate traditional banking, the goal is to create something immanently better.</p>
@@ -996,7 +891,7 @@
                   <div class="body-1-stronger">What is the main goal of the Frankencoin ?</div><img width="19.5" height="19.5" alt="" src="images/Union.svg" loading="lazy" class="faq-plus">
                 </div>
                 <div class="faq-content">
-                  <p id="all-about" class="body-1">The primary objective of the Frankencoin is to establish a decentralized financial system that enables individuals to generate currency backed by collateral, akin to traditional banking practices. This initiative is driven by a commitment to transparency, decentralization, and inclusivity, empowers users with the ability to mint their own Swiss Francs. By decentralizing the process of money creation, Frankencoin builds economic resilience and provides an alternative to conventional, centralized financial frameworks.</p>
+                  <p id="all-about" class="body-1">The primary objective of the Frankencoin is to establish a decentralized financial system that enables individuals to generate currency backed by collateral, akin to traditional banking practices. This initiative is driven by a commitment to transparency, decentralization, and inclusivity, aiming to empower users with the ability to mint their own Swiss Francs. By decentralizing the process of money creation, Frankencoin seeks to foster economic resilience and provide an alternative to conventional centralized financial frameworks.</p>
                 </div>
               </a>
               <a id="all-about" href="#" class="faq-question w-node-_8033141c-2ab8-706e-e64c-dbff3ac9dd27-3ac9dd27 w-inline-block">
@@ -1012,7 +907,7 @@
                   <div class="body-1-stronger">What are FPS tokens?</div><img width="19.5" height="19.5" alt="" src="images/Union.svg" loading="lazy" class="faq-plus">
                 </div>
                 <div class="faq-content">
-                  <p id="all-about" class="body-1">FPS tokens represent ownership in the equity reserve pool of the Frankencoin system, functioning like shares in a bank. They enable holders to earn profits from system fees, participate in governance through voting rights, and provide liquidity by minting and redeeming tokens. FPS tokens play a crucial role in maintaining stability, governance, and value creation within the Frankencoin ecosystem.</p>
+                  <p id="all-about" class="body-1">FPS tokens represent ownership in the equity reserve pool of the Frankencoin system, functioning like shares in a bank. They enable holders to earn profits from system fees, participate in governance through voting rights, and provide liquidity by minting and redeeming tokens. FPS tokens play a crucial role in maintaining stability, governance, and value creation within the Frankencoin ecosystem. Read more here: https://docs.frankencoin.com/reserve/pool-shares#reserve-pool-shares</p>
                 </div>
               </a>
               <a id="all-about" href="#" class="faq-question w-node-_8033141c-2ab8-706e-e64c-dbff3ac9dd27-3ac9dd27 w-inline-block">
@@ -1036,7 +931,7 @@
                   <div class="body-1-stronger">How can individuals invest in the FPS tokens of the Frankencoin ecosystem?</div><img width="19.5" height="19.5" alt="" src="images/Union.svg" loading="lazy" class="faq-plus">
                 </div>
                 <div class="faq-content">
-                  <p id="all-about" class="body-1">Option 1: <br>Step 1: Download the Frankencoin App <br>Step 2: Click on deposit/buy <br>Step 3: Either choose FPS on ETH or WFPS on Polygon <br>Step 4: Pay via bank wire or credit card with Apple and Google Pay  <br><br>Option 2: <br>Step 1: Head over to https://app.frankencoin.com/equity​<br>Step 2: Connect your wallet<br>Step 3: Choose what you would like to trade (ZCHF, FPS or WFPS)<br>Step 4: Choose the target asset<br>Step 5: Mint new FPS or redeem your FPS. Observe the minimum holding time of 3 months before FPS can be redeemed<br><br>Option 3: <br>Step 1: It’s possible to use the following website: https://frankencoin.dfx.swiss/<br>Step 2: Connect with Metamask <br>Step 3: Either choose FPS on ETH or WFPS on Polygon<br> Step 4: Pay via bank wire or credit card with Apple and Google Pay  <br><br>Option 4: Via Uniswap (ZCHF to FPS/FPS)<br><br>  Option 5: Polygon: Via Uniswap (ZCHF to WFPS)  ‍<br><br>Tip: Due to fees it might be better to use Polygon if the value is below 1 000 ZCHF.</p>
+                  <p id="all-about" class="body-1">Option 1: Step 1: Download the Frankencoin App <br>Step 2: Click on deposit/buy <br>Step 3: Either choose FPS on ETH or WFPS on Polygon <br>Step 4: Pay via bank wire or credit card with Apple and Google Pay  <br><br>Option 2: <br>Step 1: It’s possible to use the following website: https://frankencoin.dfx.swiss/<br>Step 2: Connect with Metamask <br>Step 3: Either choose FPS on ETH or WFPS on Polygon Step 4: Pay via bank wire or credit card with Apple and Google Pay  <br><br>Option 3: Via Uniswap (ZCHF to FPS/FPS)  Option 4: Polygon: Via Uniswap (ZCHF to WFPS)  ‍<br><br>Tip: Due to fees it might be better to use Polygon if the value is below USD 1k.</p>
                 </div>
               </a>
               <a id="all-about" href="#" class="faq-question w-node-_8033141c-2ab8-706e-e64c-dbff3ac9dd27-3ac9dd27 w-inline-block">
@@ -1044,7 +939,7 @@
                   <div class="body-1-stronger">How long is the locking period for FPS?</div><img width="19.5" height="19.5" alt="" src="images/Union.svg" loading="lazy" class="faq-plus">
                 </div>
                 <div class="faq-content">
-                  <p id="all-about" class="body-1">FPS are not locked. FPS can be transferred at any time. FPS can also be sold at any time. FPS can be exchanged for WFPS and sold via uniswap. All this is possible and there is no lock. However, if you want to redeem FPS with the SmartContract, these FPS must be at least 3 months old. Note that this is not a sale but a destruction of the FPS. After that, these FPS no longer exist and the quantity in circulation of all FPS has decreased.</p>
+                  <p id="all-about" class="body-1">FPS are not locked. FPS can be transferred at any time. FPS can also be sold at any time. FPS can be exchanged for WFPS and sold via uniswap. All this is possible and there is no lock. If you want to destroy FPS with the SmartContract, these FPS must be at least 3 months old. However, this is not a sale but a destruction of the FPS. After that, these FPS no longer exist and the quantity in circulation of all FPS has decreased.</p>
                 </div>
               </a>
               <a id="all-about" href="#" class="faq-question w-node-_8033141c-2ab8-706e-e64c-dbff3ac9dd27-3ac9dd27 w-inline-block">
@@ -1052,15 +947,15 @@
                   <div class="body-1-stronger">Is the Frankencoin a security?</div><img width="19.5" height="19.5" alt="" src="images/Union.svg" loading="lazy" class="faq-plus">
                 </div>
                 <div class="faq-content">
-                  <p id="all-about" class="body-1">No, it neither qualifies formally nor functionally as a security. It does not qualify formally as a security under Swiss law as it does not represent a claim towards an issuer. Also, it does not qualify functionally as a security as it does not serve a financing purpose. This has been confirmed by the reputable Swiss law firm LEXR.</p>
+                  <p id="all-about" class="body-1">No, it neither qualifies formally nor functionally as a security. It does not qualify formally as a security under Swiss law as it does not represent a claim towards an issuer. Also, it does not qualify functionally as a security as it does not serve a financing purpose.</p>
                 </div>
               </a>
               <a id="all-about" href="#" class="faq-question w-node-_8033141c-2ab8-706e-e64c-dbff3ac9dd27-3ac9dd27 w-inline-block">
                 <div class="faq-question-bar">
-                  <div class="body-1-stronger">Is Frankencoin a political coin?</div><img width="19.5" height="19.5" alt="" src="images/Union.svg" loading="lazy" class="faq-plus">
+                  <div class="body-1-stronger">Is Frankencoin a political Coin?</div><img width="19.5" height="19.5" alt="" src="images/Union.svg" loading="lazy" class="faq-plus">
                 </div>
                 <div class="faq-content">
-                  <p id="all-about" class="body-1">Yes, to some extent. The Frankencoin addresses issues within the current system of money creation, highlighting how it distorts capital allocation. For example, regulatory constraints may incentivize investments that aren&#x27;t optimal for society. Traditional capital requirements tend to favor certain sectors like real estate and government bonds over others. By leveraging blockchain technology, Frankencoin offers an alternative outside the traditional financial system. It empowers individuals by allowing them to create their own money, potentially leading to a stronger economy and more growth if used responsibly.</p>
+                  <p id="all-about" class="body-1">Yes, to some extent. The Frankencoin addresses issues within the current system of money creation, highlighting how it distorts capital allocation. For example, regulatory constraints may incentivize investments that aren&#x27;t optimal for society. Traditional capital requirements tend to favor certain sectors like real estate and government bonds over others. By leveraging blockchain technology, Frankencoin offers an alternative outside the traditional financial system. It seeks to empower individuals by allowing them to create their own money, potentially leading to a stronger economy and more growth if used responsibly.</p>
                 </div>
               </a>
             </div>

@@ -30,7 +30,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     async function getData() {
       try {
-        let response = await fetch("https://api.dfx.swiss/v1/frankencoin/info");
+        let response = await fetch("https://api.frankencoin.com/ecosystem/frankencoin/info");
         if (!response.ok) throw new Error("Failed to fetch quote");
         return response.json();
       } catch (error) {
@@ -45,12 +45,9 @@
     }
     getData().then((data) => {
       if (data) {
-        setContent("zchfTotalSupply", formatAmount(data.totalSupplyZchf ?? 0));
-        setContent("totalValueLocked", formatAmount(27567451.25 ?? 0));
-        setContent("fpsMarketCap", formatAmount(data.fpsMarketCapInChf ?? 0));
-        setContent("zchfTotalSupplyCurrency", "ZCHF");
-        setContent("totalValueLockedCurrency", "ZCHF");
-        setContent("fpsMarketCapCurrency", "ZCHF");
+        setContent("zchfTotalSupply", formatAmount(data.total.supply ?? 0));
+        setContent("totalValueLocked", formatAmount(data.tvl.chf ?? 0));
+        setContent("fpsMarketCap", formatAmount(data.fps.fpsMarketCapInChf ?? 0));
       }
     });
   });

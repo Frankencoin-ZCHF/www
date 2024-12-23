@@ -19,6 +19,38 @@
     text-overflow: ellipsis;
   }
 </style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    async function getData() {
+      try {
+        let response = await fetch("https://api.frankencoin.com/ecosystem/fps/info");
+        if (!response.ok) throw new Error("Failed to fetch quote");
+        return response.json();
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+    function formatAmount(amount) {
+      return amount.toFixed(2).replace(/\d{1,3}(?=(\d{3})+(?!\d))/g, "$&'")
+    }
+    function setContent(id, content) {
+      document.getElementById(id).textContent = content;
+    }
+    getData().then((data) => {
+      if (data) {
+        setContent("fpsPrice", formatAmount(data.values.price ?? 0));
+        setContent("fpsTotalSupply", formatAmount(data.values.totalSupply ?? 0));
+        setContent("fpsMarketCapInChf", formatAmount(data.values.fpsMarketCapInChf ?? 0));
+
+        setContent("reserveBalance", formatAmount(data.reserve.balance ?? 0));
+        setContent("reserveEquity", formatAmount(data.reserve.equity ?? 0));
+        setContent("reserveMinter", formatAmount(data.reserve.minter ?? 0));
+
+        setContent("fpsIncome", formatAmount(data.earnings.profit - data.earnings.loss ?? 0));
+      }
+    });
+  });
+</script>
 </head>
 <body>
   <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
@@ -112,7 +144,7 @@
               <div class="paragraph">Fps Price</div><img src="images/arrow_outward.svg" loading="lazy" alt="" class="image-4">
             </div>
             <div class="value">
-              <div id="fpsPrice" class="big-number">loading</div>
+              <div id="fpsPrice" class="big-number"></div>
               <div class="big-number-2">ZCHF</div>
             </div>
           </div>
@@ -123,7 +155,7 @@
               <div class="paragraph">FPS supply</div><img src="images/arrow_outward.svg" loading="lazy" alt="" class="image-4">
             </div>
             <div class="value">
-              <div id="fpsTotalSupply" class="big-number">loading</div>
+              <div id="fpsTotalSupply" class="big-number"></div>
               <div class="big-number-2">FPS</div>
             </div>
           </div>
@@ -134,7 +166,7 @@
               <div class="paragraph">fps market cap</div><img src="images/arrow_outward.svg" loading="lazy" alt="" class="image-4">
             </div>
             <div class="value">
-              <div id="fpsMarketCapInChf" class="big-number">loading</div>
+              <div id="fpsMarketCapInChf" class="big-number"></div>
               <div class="big-number-2">ZCHF</div>
             </div>
           </div>
@@ -147,7 +179,7 @@
               <div class="xs-cap">Total reverve</div>
             </div>
             <div class="value-2">
-              <div class="title-2 deepblue stats-mobile">loading</div>
+              <div id="reserveBalance" class="title-2 deepblue stats-mobile"></div>
               <div class="xs-cap">ZCHF</div>
             </div>
           </div>
@@ -158,7 +190,7 @@
               <div class="xs-cap">equity capital</div>
             </div>
             <div class="value-2">
-              <div class="title-2 deepblue stats-mobile">loading</div>
+              <div id="reserveEquity" class="title-2 deepblue stats-mobile"></div>
               <div class="xs-cap">ZCHF</div>
             </div>
           </div>
@@ -169,7 +201,7 @@
               <div class="xs-cap">minter reserve</div>
             </div>
             <div class="value-2">
-              <div class="title-2 deepblue stats-mobile">loading</div>
+              <div id="reserveMinter" class="title-2 deepblue stats-mobile"></div>
               <div class="xs-cap">ZCHF</div>
             </div>
           </div>
@@ -177,21 +209,10 @@
         <div class="stats-box">
           <div class="text-90">
             <div class="title-7">
-              <div class="xs-cap">Total income</div>
+              <div class="xs-cap">Net income since 2024</div>
             </div>
             <div class="value-2">
-              <div class="title-2 deepblue stats-mobile">loading</div>
-              <div class="xs-cap">ZCHF</div>
-            </div>
-          </div>
-        </div>
-        <div class="stats-box">
-          <div class="text-90">
-            <div class="title-7">
-              <div class="xs-cap">total losses</div>
-            </div>
-            <div class="value-2">
-              <div class="title-2 deepblue stats-mobile">loading</div>
+              <div id="fpsIncome" class="title-2 deepblue stats-mobile"></div>
               <div class="xs-cap">ZCHF</div>
             </div>
           </div>

@@ -748,19 +748,32 @@
   background-image: none;
   justify-content: center;
   align-items: flex-start;
-  height: 107vh;
+  height: 93vh;
   margin-bottom: 0;
   padding-top: 0;
   padding-bottom: 0;
 }
 
-.hero.whatisfrankecoin, .hero.poolshares {
+.hero.whatisfrankecoin {
   grid-column-gap: 48px;
   grid-row-gap: 48px;
   background-image: none;
   justify-content: center;
   align-items: center;
-  height: 109vh;
+  height: 90vh;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+}
+
+.hero.poolshares {
+  grid-column-gap: 48px;
+  grid-row-gap: 48px;
+  background-image: none;
+  justify-content: center;
+  align-items: center;
+  height: 93vh;
   margin-bottom: 0;
   padding-top: 0;
   padding-bottom: 0;
@@ -882,7 +895,7 @@
   background-repeat: repeat;
   background-size: cover;
   background-attachment: scroll;
-  height: 939.453px;
+  height: auto;
 }
 
 .section.stats-section {

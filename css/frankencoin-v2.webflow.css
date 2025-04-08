@@ -67,6 +67,7 @@
   --line-height--titel-1-mobile: 34px;
   --font-size--display-mobile: 42px;
   --brand-colors--titan-gray: #5d647b;
+  --blue-39: #065dc1;
   --black: black;
   --button-corner-radius: 4px;
   --brand-colors--white: white;
@@ -5001,6 +5002,33 @@
   text-decoration-thickness: .1rem;
 }
 
+.textlink-m {
+  color: var(--blue-39);
+  -webkit-text-stroke-color: var(--brand-colors--deep-blue);
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+  font-family: "Avenir Book 400", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  display: flex;
+}
+
+.textlink-m:hover {
+  color: var(--brand-colors--swiss-blue);
+}
+
+.textlink-xl {
+  color: var(--blue-39);
+  text-underline-offset: .2rem;
+  text-decoration: none;
+  text-decoration-thickness: .1rem;
+}
+
+.textlink-xl:hover {
+  color: var(--blue-pallet--blue-50);
+}
+
 @media screen and (min-width: 1440px) {
   .nav-left {
     width: 50%;
@@ -5212,6 +5240,12 @@
 
   .link-7 {
     color: var(--brand-colors--deep-blue);
+    text-underline-offset: .2rem;
+    text-decoration-thickness: .1rem;
+  }
+
+  .textlink-xl {
+    color: var(--blue-39);
     text-underline-offset: .2rem;
     text-decoration-thickness: .1rem;
   }
@@ -6673,6 +6707,12 @@
 
   .link-7 {
     color: var(--brand-colors--deep-blue);
+    text-underline-offset: .2rem;
+    text-decoration-thickness: .1rem;
+  }
+
+  .textlink-xl {
+    color: var(--blue-39);
     text-underline-offset: .2rem;
     text-decoration-thickness: .1rem;
   }

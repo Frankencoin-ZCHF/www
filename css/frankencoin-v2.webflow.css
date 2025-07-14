@@ -1,3 +1,99 @@
+@font-face {
+  font-family: "Avenir Oblique 400";
+  src: url('../fonts/Avenir-Oblique-11.ttf') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Light 300";
+  src: url('../fonts/Avenir-Light-07.ttf') format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir LightOblique 300";
+  src: url('../fonts/Avenir-LightOblique-08.ttf') format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Roman 400";
+  src: url('../fonts/Avenir-Roman-12.ttf') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir MediumOblique 500";
+  src: url('../fonts/Avenir-MediumOblique-10.ttf') format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Heavy 900";
+  src: url('../fonts/Avenir-Heavy-05.ttf') format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir HeavyOblique 900";
+  src: url('../fonts/Avenir-HeavyOblique-06.ttf') format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir BlackOblique 900";
+  src: url('../fonts/Avenir-BlackOblique-04.ttf') format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir BookOblique 400";
+  src: url('../fonts/Avenir-BookOblique-02.ttf') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Black 900";
+  src: url('../fonts/Avenir-Black-03.ttf') format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Medium 500";
+  src: url('../fonts/Avenir-Medium-09.ttf') format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Book 400";
+  src: url('../fonts/Avenir-Book-01.ttf') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --font--body-2-stronger-desktop: "Avenir Black 900", sans-serif;
   --font--body-2-desktop: "Avenir Book 400", sans-serif;
@@ -46,6 +142,7 @@
   --font--body-3-stronger-mobile: "Avenir Black 900", sans-serif;
   --font-size--body-3-stronger-mobile: 16px;
   --line-height--body-3-stronger-mobile: 20px;
+  --font-size--sm-stronger: 14px;
   --gray--60: #8b92a8;
   --font--body-3-mobile: "Avenir Book 400", sans-serif;
   --font-size--body-3-mobile: 16px;
@@ -53,9 +150,9 @@
   --gray--20: #dfe0e6;
   --font--xs: "Avenir Book 400", sans-serif;
   --font-size--xs: 12px;
+  --2xs: 11px;
   --font--xs-b: "Avenir Black 900", sans-serif;
   --font--sm-stronger: "Avenir Heavy 900", sans-serif;
-  --font-size--sm-stronger: 14px;
   --gray--15: #e5e6eb;
   --font--body-1-stronger-desktop: "Avenir Black 900", sans-serif;
   --font-size--body-1-stronger-desktop: 20px;
@@ -1020,6 +1117,9 @@
   color: var(--brand-colors--deep-blue);
   font-size: var(--font-size--display-desktop);
   line-height: var(--line-height--display-desktop);
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 900;
 }
 
 .image-2 {
@@ -1578,7 +1678,8 @@
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  height: 400px;
+  height: auto;
+  min-height: 400px;
   padding: 48px 36px;
   text-decoration: none;
   transition: box-shadow .2s;
@@ -1619,11 +1720,14 @@
   line-height: var(--line-height--body-1-desktop);
   text-align: left;
   -webkit-text-stroke-color: transparent;
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 400;
 }
 
 .body-1.token-classification {
   color: var(--brand-colors--deep-blue);
+  text-align: left;
 }
 
 .body-1.center {
@@ -1632,9 +1736,11 @@
 
 .body-2-stronger {
   box-sizing: border-box;
-  font-family: var(--font--body-2-stronger-desktop);
   color: var(--gray--75);
+  font-family: "Avenir Black 900", sans-serif;
   font-size: var(--font-size--body-2-stronger-desktop);
+  font-weight: 500;
+  line-height: 16px;
 }
 
 .body-2-stronger:hover {
@@ -1648,6 +1754,11 @@
 
 .body-2-stronger.tab-text-bold {
   color: var(--brand-colors--anthracite);
+}
+
+.body-2-stronger.sm-text {
+  font-family: "Avenir Heavy 900", sans-serif;
+  font-size: var(--font-size--sm-stronger);
 }
 
 .text-78 {
@@ -2014,7 +2125,7 @@
   flex: 0 auto;
   justify-content: center;
   align-items: center;
-  height: 1px;
+  height: 2px;
   text-decoration: none;
   display: flex;
 }
@@ -2150,6 +2261,7 @@
 }
 
 .xs.token-code {
+  font-family: var(--font--xs);
   white-space: break-spaces;
   word-break: break-all;
   flex-flow: row;
@@ -2159,6 +2271,11 @@
   width: auto;
   display: flex;
   overflow: auto;
+}
+
+.xs.token-code.xs-smaller {
+  font-family: var(--font--xs);
+  font-size: var(--2xs);
 }
 
 .xs-b {
@@ -2441,15 +2558,17 @@
 .ecosystem-logo-block {
   grid-row-gap: 8px;
   background-image: url('../images/Vector-Compressify.io-1.webp');
-  background-position: 50%;
-  background-size: contain;
+  background-position: 0 0;
+  background-size: cover;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 800px;
-  height: 100%;
-  max-height: 354px;
+  height: auto;
+  max-height: none;
+  padding-top: 60px;
+  padding-bottom: 60px;
   text-decoration: none;
   display: flex;
 }
@@ -3462,6 +3581,8 @@
   color: var(--brand-colors--deep-blue);
   font-size: var(--font-size--title-1-desktop);
   line-height: var(--line-height--title-1-desktop);
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 900;
 }
 
@@ -3928,6 +4049,8 @@
   font-size: var(--font-size--display-desktop);
   line-height: var(--line-height--display-desktop);
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 900;
 }
 
@@ -5029,6 +5152,120 @@
   color: var(--blue-pallet--blue-50);
 }
 
+.center {
+  grid-row-gap: 4px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+}
+
+.swap-stables-block {
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  flex-flow: wrap;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  grid-auto-columns: 1fr;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  display: grid;
+}
+
+.sm-stronger-2 {
+  color: #5d647b;
+  font-family: "Avenir Heavy 900", sans-serif;
+  font-size: 14px;
+}
+
+.pool-bank-block {
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  flex-flow: wrap;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  display: grid;
+}
+
+.button-subtle-small {
+  grid-column-gap: 8px;
+  background-color: #f7f7f9;
+  border: 1px solid #eff0f3;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 58px;
+  padding: 8px 12px;
+  transition: box-shadow .2s, border-color .2s, background-color .2s;
+  display: flex;
+}
+
+.button-subtle-small:hover {
+  background-color: #f7f7f9;
+  border-color: #dfe0e6;
+  box-shadow: 0 1px 2px #00000008, 0 6px 8px #0000001a;
+}
+
+.vectors-wrapper-1519 {
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  max-width: none;
+  height: auto;
+  text-decoration: none;
+  display: flex;
+  overflow: visible;
+}
+
+.vectors-wrapper-1519.stablecoins {
+  max-height: 34px;
+}
+
+.bottom-v2 {
+  grid-row-gap: 24px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+}
+
+.button-subtle-2 {
+  grid-column-gap: 10px;
+  background-color: #f7f7f9;
+  border: 1px solid #eff0f3;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  padding: 12px;
+  transition: box-shadow .2s, border-color .2s, background-color .2s;
+  display: flex;
+}
+
+.button-subtle-2:hover {
+  background-color: #f7f7f9;
+  border-color: #dfe0e6;
+  box-shadow: 0 1px 2px #00000008, 0 6px 8px #0000001a;
+}
+
+.div-block-25 {
+  font-family: "Avenir Book 400", sans-serif;
+  font-size: var(--2xs);
+  line-height: 16px;
+}
+
 @media screen and (min-width: 1440px) {
   .nav-left {
     width: 50%;
@@ -5248,6 +5485,10 @@
     color: var(--blue-39);
     text-underline-offset: .2rem;
     text-decoration-thickness: .1rem;
+  }
+
+  .vectors-wrapper-1519.stablecoins {
+    max-height: 32px;
   }
 }
 
@@ -6347,7 +6588,7 @@
     background-size: cover;
     width: 100%;
     height: 100%;
-    max-height: 360px;
+    max-height: none;
     padding-top: 8%;
     padding-bottom: 8%;
   }
@@ -6362,12 +6603,13 @@
     align-items: center;
     width: 100%;
     height: auto;
+    max-height: none;
     padding: 0;
   }
 
   .chainsec-logo {
     width: auto;
-    max-width: 97%;
+    max-width: 92%;
     height: auto;
   }
 
@@ -6391,7 +6633,7 @@
   .blockbyte-logo-3.scale-transform {
     width: 100%;
     min-width: auto;
-    max-width: none;
+    max-width: 64%;
     max-height: 0%;
   }
 
@@ -6402,11 +6644,13 @@
 
   .grid-6 {
     grid-column-gap: 16px;
-    grid-row-gap: 24px;
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 40px;
+    flex-flow: column;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr;
     width: auto;
     padding-left: 0;
+    display: flex;
   }
 
   .audit-block {
@@ -6669,8 +6913,10 @@
   }
 
   .decurity-logo.scale-transform {
-    width: 90%;
-    max-width: none;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    max-width: 60%;
   }
 
   .link-block-11 {
@@ -6685,7 +6931,9 @@
   .div-block-24 {
     grid-column-gap: 12px;
     grid-row-gap: 12px;
-    min-width: 173px;
+    flex-flow: row;
+    width: auto;
+    min-width: 0;
   }
 
   .chainsec-audits {
@@ -6715,6 +6963,12 @@
     color: var(--blue-39);
     text-underline-offset: .2rem;
     text-decoration-thickness: .1rem;
+  }
+
+  .swap-stables-block, .pool-bank-block {
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
   }
 }
 

@@ -47,9 +47,9 @@
     }
     getData().then((data) => {
       if (data) {
-      	setContent("zchfTotalSupply", formatAmount(data.total.supply ?? 0));
+      	setContent("zchfTotalSupply", formatAmount(data.token.supply ?? 0));
         setContent("totalValueLocked", formatAmount(data.tvl.chf ?? 0));
-        setContent("fpsMarketCap", formatAmount(data.fps.fpsMarketCapInChf ?? 0));
+        setContent("fpsMarketCap", formatAmount(data.fps.marketCap ?? 0));
       }
     });
   });

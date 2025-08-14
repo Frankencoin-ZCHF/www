@@ -45,9 +45,9 @@
     }
     getData().then((data) => {
       if (data) {
-        setContent("fpsPrice", formatAmount(data.values.price ?? 0));
-        setContent("fpsTotalSupply", formatAmount(data.values.totalSupply ?? 0));
-        setContent("fpsMarketCapInChf", formatAmount(data.values.fpsMarketCapInChf ?? 0));
+        setContent("fpsPrice", formatAmount(data.token.price ?? 0));
+        setContent("fpsTotalSupply", formatAmount(data.token.totalSupply ?? 0));
+        setContent("fpsMarketCapInChf", formatAmount(data.token.marketCap ?? 0));
         setContent("reserveBalance", formatAmount(data.reserve.balance ?? 0));
         setContent("reserveEquity", formatAmount(data.reserve.equity ?? 0));
         setContent("reserveMinter", formatAmount(data.reserve.minter ?? 0));
